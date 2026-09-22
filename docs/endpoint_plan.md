@@ -28,3 +28,4 @@
 <!-- Formatting check: Event endpoints finalised -->
 <!-- Formatting check: Category endpoints finalised -->
 <!-- Formatting check: Enrollment endpoints finalised -->
+<!-- Formatting check: Result endpoints finalised -->
