@@ -26,3 +26,4 @@
 
 <!-- Formatting check: Auth endpoints finalised -->
 <!-- Formatting check: Event endpoints finalised -->
+<!-- Formatting check: Category endpoints finalised -->
