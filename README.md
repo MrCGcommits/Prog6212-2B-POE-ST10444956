@@ -30,6 +30,6 @@ The system supports two distinct roles:
 
 
 ## Project Links
-- **YouTube Video Presentation:** [Insert Unlisted YouTube Link Here]
+- **YouTube Video Presentation:** https://youtu.be/NvDGR1lnJ54
 - **CI/CD Status:** 
   ![CI Green Build](./ci_screenshot.png)
