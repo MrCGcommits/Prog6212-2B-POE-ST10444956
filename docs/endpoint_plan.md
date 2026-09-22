@@ -22,3 +22,6 @@
 | **POST** | `/api/results` | Organiser captures participant results for an event. | Organiser | `{enrollmentId, finishTime, overallPosition, categoryPosition}` | **201** Created. <br>**400** Bad Request. <br>**403** Forbidden. |
 | **GET** | `/api/results/my` | Participant tracks their personal results. | Participant | None | **200** OK (List of results). <br>**401** Unauthorized. |
 | **GET** | `/api/events/{id}/results` | Organiser views all results for their event. | Organiser | None | **200** OK (List of results). <br>**403** Forbidden. <br>**404** Not Found. |
+
+
+<!-- Formatting check: Auth endpoints finalised -->
