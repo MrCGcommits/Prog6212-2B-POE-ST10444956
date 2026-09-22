@@ -1,0 +1,38 @@
+name: Validate Part 1 Docs
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  check-docs:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Check if /docs folder exists
+      run: |
+        if [ ! -d "docs" ]; then
+          echo "Error: /docs folder is missing!"
+          exit 1
+        fi
+        
+    - name: Check for required files in /docs
+      run: |
+        files=("ERD.png" "raceday_db.sql" "endpoint_plan.md")
+        found=0
+        for file in "${files[@]}"; do
+          if [ -f "docs/$file" ]; then
+            echo "Found: docs/$file"
+            found=1
+          fi
+        done
+        if [ $found -eq 0 ]; then
+          echo "Error: No valid ERD, endpoint plan, or SQL file found in /docs."
+          exit 1
+        fi
+        
+    - name: Success
+      run: echo "All required documentation files are present."
