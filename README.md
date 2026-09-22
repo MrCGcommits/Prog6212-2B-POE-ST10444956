@@ -8,6 +8,9 @@ The system supports two distinct roles:
 - **Organiser:** Can create, edit, and delete events, manage event categories, capture participant results, and view all event enrolments.
 - **Participant:** Can create an account, browse events, enter an event by selecting a category, view their own enrolments, and track their personal results.
 
+## Update Log
+- 2026-09-22: Initial ERD design completed.
+
 
 
 
