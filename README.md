@@ -10,6 +10,7 @@ The system supports two distinct roles:
 
 ## Update Log
 - 2026-09-22: Initial ERD design completed.
+- 2026-09-22: Database schema script written and tested in SSMS.
 
 
 
