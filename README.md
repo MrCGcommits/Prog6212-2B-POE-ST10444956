@@ -33,3 +33,10 @@ The system supports two distinct roles:
 - **YouTube Video Presentation:** https://youtu.be/NvDGR1lnJ54
 - **CI/CD Status:** 
   ![CI Green Build](./ci_screenshot.png)
+
+
+## Declaration of AI Usage
+In accordance with academic integrity policies, I hereby declare that Artificial Intelligence (AI) tools were used to aid in the completion of this project. Specifically, AI was utilized for the following purposes:
+- Drafting and refining the SQL script and API endpoint plan.
+- Formatting a part of the README file and providing guidance on the structure of the GitHub repository.
+All AI-generated content was reviewed, tested, and adapted by me to ensure it met the specific requirements of the assignment and reflected my own understanding of the system.
