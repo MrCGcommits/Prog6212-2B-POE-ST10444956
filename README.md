@@ -23,4 +23,5 @@ The system supports two distinct roles:
 
 ## Project Links
 - **YouTube Video Presentation:** [Insert Unlisted YouTube Link Here]
-- **CI/CD Status:** [Insert Screenshot of Green Build Here]
+- **CI/CD Status:** 
+  ![CI Green Build](./ci_screenshot.png)
