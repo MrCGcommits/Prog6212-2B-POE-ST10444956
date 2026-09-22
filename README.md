@@ -40,3 +40,11 @@ In accordance with academic integrity policies, I hereby declare that Artificial
 - Drafting and refining the SQL script and API endpoint plan.
 - Formatting a part of the README file and providing guidance on the structure of the GitHub repository.
 All AI-generated content was reviewed, tested, and adapted by me to ensure it met the specific requirements of the assignment and reflected my own understanding of the system.
+
+## References
+Microsoft (2024) *SQL Server Management Studio documentation*. Available at: https://learn.microsoft.com/en-us/sql/ssms/ (Accessed: 22 September 2026).
+
+Microsoft (2024) *GitHub Actions documentation*. Available at: https://docs.github.com/en/actions (Accessed: 22 September 2026).
+
+Mermaid (2024) *Mermaid Diagramming and charting tool documentation*. Available at: https://mermaid.js.org/ (Accessed: 22 September 2026).
+
