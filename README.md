@@ -7,3 +7,20 @@ RaceDay is a full-stack web-based event management system designed specifically 
 The system supports two distinct roles:
 - **Organiser:** Can create, edit, and delete events, manage event categories, capture participant results, and view all event enrolments.
 - **Participant:** Can create an account, browse events, enter an event by selecting a category, view their own enrolments, and track their personal results.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Project Links
+- **YouTube Video Presentation:** [Insert Unlisted YouTube Link Here]
+- **CI/CD Status:** [Insert Screenshot of Green Build Here]
