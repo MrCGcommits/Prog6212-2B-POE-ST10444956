@@ -30,3 +30,22 @@ The system supports two distinct roles:
 ## Project Links
 - **YouTube Video Presentation (Part 2):** https://youtu.be/hlMsbHTgr9w
 - **Part 1 YouTube Video:** https://youtu.be/NvDGR1lnJ54
+
+
+## Declaration of AI Usage
+In accordance with academic integrity policies, I hereby declare that Artificial Intelligence (AI) tools were used to aid in the completion of this project. Specifically, AI was utilised for the following purposes:
+- Assisting in the design and implementation of the Entity Framework Core models and controllers for the RESTful API.
+- Providing guidance and troubleshooting for the implementation of Cookie-based session authentication and Role-Based Access Control (RBAC).
+- **Workflows (CI/CD):** Assisting in generating the YAML syntax for the GitHub Actions workflows to automate the build and unit test processes.
+
+All AI-generated content and code were reviewed, tested, and adapted by me to ensure it met the specific requirements of the assignment and reflected my own understanding of the system.
+
+## References
+GitHub (2024) *GitHub Actions documentation*. Available at: https://docs.github.com/en/actions (Accessed: 20 October 2026).
+
+Microsoft (2024) *ASP.NET Core documentation*. Available at: https://learn.microsoft.com/en-us/aspnet/core/ (Accessed: 20 October 2026).
+
+Microsoft (2024) *Entity Framework Core documentation*. Available at: https://learn.microsoft.com/en-us/ef/core/ (Accessed: 20 October 2026).
+
+Microsoft (2024) *Unit testing C# with xUnit and .NET*. Available at: https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-dotnet-test (Accessed: 20 October 2026).
+
