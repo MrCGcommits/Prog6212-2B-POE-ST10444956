@@ -28,5 +28,5 @@ The system supports two distinct roles:
 - **Participant:** Can create an account, browse events, enter an event by selecting a category, view their own enrolments, and track their personal results.
 
 ## Project Links
-- **YouTube Video Presentation (Part 2):** [Insert Unlisted YouTube Link Here]
-- **Part 1 YouTube Video:** [Insert Part 1 Link Here, if you have it]
+- **YouTube Video Presentation (Part 2):** https://youtu.be/hlMsbHTgr9w
+- **Part 1 YouTube Video:** https://youtu.be/NvDGR1lnJ54
