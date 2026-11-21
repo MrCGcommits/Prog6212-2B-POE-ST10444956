@@ -1,0 +1,79 @@
+﻿@model RaceDayMVC.Models.EventViewModel
+@{
+    ViewData["Title"] = "Manage Categories";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4 mt-3">
+    <h2 class="text-primary fw-bold">Categories for: @ViewBag.EventName</h2>
+    <a asp-action="Dashboard" class="btn btn-secondary">Back to Dashboard</a>
+</div>
+
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @TempData["Error"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<div class="row">
+    <!-- Left Side: Add Category Form -->
+    <div class="col-md-5">
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-success text-white">
+                <h5 class="mb-0">Add New Category</h5>
+            </div>
+            <div class="card-body">
+                <form asp-action="AddCategory" method="post">
+                    <input type="hidden" name="eventId" value="@ViewBag.EventId" />
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Category Name</label>
+                        <input type="text" name="categoryName" class="form-control" placeholder="e.g., Under 20, Senior, 10km" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Max Participants</label>
+                        <input type="number" name="maxParticipants" class="form-control" placeholder="e.g., 100" required />
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">Add Category</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Side: Existing Categories Table -->
+    <div class="col-md-7">
+        <div class="card shadow-sm border-0">
+            <div class="card-header bg-dark text-white">
+                <h5 class="mb-0">Existing Categories</h5>
+            </div>
+            <div class="card-body p-0">
+                <table class="table table-hover mb-0">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Category Name</th>
+                            <th>Max Participants</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.Categories != null && Model.Categories.Any())
+                        {
+                            foreach (var cat in Model.Categories)
+                            {
+                                <tr>
+                                    <td class="fw-bold">@cat.CategoryName</td>
+                                    <td>@cat.MaxParticipants</td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="2" class="text-center text-muted py-3">No categories added yet.</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
