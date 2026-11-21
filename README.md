@@ -49,4 +49,4 @@ The app will be accessible at http://localhost:8080.
 [Add your unlisted YouTube video link here]
 
 ## ✅ CI/CD Pipeline
-![CI Build Success](./RaceDayAPI/ci-success.png)
+![CI Build Success](./ci-success.png)
