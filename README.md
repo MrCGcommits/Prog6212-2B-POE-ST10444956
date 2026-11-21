@@ -45,7 +45,7 @@ docker run -d -p 8080:8080 --name raceday-mvc-container raceday-mvc
 
 The app will be accessible at http://localhost:8080.
 
-##🎥 Video Presentation
+## 🎥 Video Presentation
 https://youtu.be/1Ar-4MrjhaM 
 
 ## ✅ CI/CD Pipeline
