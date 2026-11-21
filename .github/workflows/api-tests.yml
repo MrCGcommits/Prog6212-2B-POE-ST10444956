@@ -2,7 +2,7 @@ name: .NET Core CI
 
 on:
   push:
-    branches: [ "main", "master", "part3" ]
+    branches: [ "main", "master", "Part3-MVC" ]
   pull_request:
     branches: [ "main", "master" ]
 
