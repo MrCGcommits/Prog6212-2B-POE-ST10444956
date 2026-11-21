@@ -1,0 +1,41 @@
+﻿@model IEnumerable<System.Text.Json.JsonElement>
+@{
+    ViewData["Title"] = "My Results";
+}
+
+<h2 class="mb-4 text-primary fw-bold">My Race Results</h2>
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info">You don't have any race results yet. Keep training!</div>
+}
+else
+{
+    <table class="table table-hover shadow-sm">
+        <thead class="table-dark">
+            <tr>
+                <th>Event</th>
+                <th>Category</th>
+                <th>Finish Time</th>
+                <th>Position</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                var enrollment = item.GetProperty("enrollment");
+                var eventName = enrollment.GetProperty("event").GetProperty("eventName").GetString();
+                var categoryName = enrollment.GetProperty("category").GetProperty("categoryName").GetString();
+                var finishTime = item.GetProperty("finishTime").GetString();
+                var position = item.GetProperty("overallPosition").GetInt32();
+                
+                <tr>
+                    <td class="fw-bold">@eventName</td>
+                    <td>@categoryName</td>
+                    <td>@finishTime</td>
+                    <td><span class="badge bg-success">@position</span></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
