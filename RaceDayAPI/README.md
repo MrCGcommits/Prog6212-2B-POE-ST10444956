@@ -48,5 +48,5 @@ The app will be accessible at http://localhost:8080.
 🎥 Video Presentation
 [Add your unlisted YouTube video link here]
 
-✅ CI/CD Pipeline
-[Add a screenshot of your successful GitHub Actions green build here]
+## ✅ CI/CD Pipeline
+![CI Build Success](./ci-success.png)
