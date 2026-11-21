@@ -1,0 +1,42 @@
+﻿@model IEnumerable<RaceDayMVC.Models.EventViewModel>
+@{
+    ViewData["Title"] = "Upcoming Events";
+}
+
+<h2 class="mb-4 text-primary fw-bold">Upcoming RaceDay Events</h2>
+
+<form asp-action="Index" method="get" class="mb-4 d-flex">
+    <input type="text" name="searchString" class="form-control me-2" placeholder="Search by name or location..." value="@ViewBag.CurrentFilter" />
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm h-100 border-0">
+                @if (!string.IsNullOrEmpty(item.BannerImageUrl))
+                {
+                    <img src="@item.BannerImageUrl" class="card-img-top" alt="Event Banner" style="height: 200px; object-fit: cover;">
+                }
+                else
+                {
+                    <div class="bg-secondary text-white d-flex align-items-center justify-content-center" style="height: 200px;">
+                        <span>No Image Available</span>
+                    </div>
+                }
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">@item.EventName</h5>
+                    <p class="card-text text-muted mb-1"><small>📅 @item.EventDate.ToShortDateString()</small></p>
+                    <p class="card-text mb-1"><small>📍 @item.Location</small></p>
+                    <span class="badge bg-info text-dark text-uppercase">@item.EventType</span>
+                    <span class="badge bg-dark">@item.Distance km</span>
+                </div>
+                <div class="card-footer bg-white border-0 pt-0">
+                    <hr />
+                    <a asp-action="Details" asp-route-id="@item.EventId" class="btn btn-outline-primary w-100">View Details & Enrol</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
