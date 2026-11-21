@@ -19,16 +19,16 @@ jobs:
         dotnet-version: 8.0.x
         
     - name: Restore dependencies API
-      run: dotnet restore "PROG6212 2B/RaceDayAPI/RaceDayAPI/RaceDayAPI.csproj"
+      run: dotnet restore "RaceDayAPI/RaceDayAPI/RaceDayAPI.csproj"
       
     - name: Build API
-      run: dotnet build "PROG6212 2B/RaceDayAPI/RaceDayAPI/RaceDayAPI.csproj" --no-restore
+      run: dotnet build "RaceDayAPI/RaceDayAPI/RaceDayAPI.csproj" --no-restore
       
     - name: Test API
-      run: dotnet test "PROG6212 2B/RaceDayAPI.Tests/RaceDayAPI.Tests.csproj" --no-restore
+      run: dotnet test "RaceDayAPI.Tests/RaceDayAPI.Tests.csproj" --no-restore
       
     - name: Restore dependencies MVC
-      run: dotnet restore "PROG6212 2B/RaceDayAPI/RaceDayMVC/RaceDayMVC.csproj"
+      run: dotnet restore "RaceDayAPI/RaceDayMVC/RaceDayMVC.csproj"
       
     - name: Build MVC
-      run: dotnet build "PROG6212 2B/RaceDayAPI/RaceDayMVC/RaceDayMVC.csproj" --no-restore
+      run: dotnet build "RaceDayAPI/RaceDayMVC/RaceDayMVC.csproj" --no-restore
