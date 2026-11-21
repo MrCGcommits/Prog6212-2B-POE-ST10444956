@@ -24,8 +24,9 @@ jobs:
     - name: Build API
       run: dotnet build "RaceDayAPI/RaceDayAPI/RaceDayAPI.csproj" --no-restore
       
+    # Notice we removed --no-restore from the test command
     - name: Test API
-      run: dotnet test "RaceDayAPI.Tests/RaceDayAPI.Tests.csproj" --no-restore
+      run: dotnet test "RaceDayAPI.Tests/RaceDayAPI.Tests.csproj"
       
     - name: Restore dependencies MVC
       run: dotnet restore "RaceDayAPI/RaceDayMVC/RaceDayMVC.csproj"
