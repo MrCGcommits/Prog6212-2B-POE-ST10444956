@@ -1,14 +1,13 @@
-
-name: Build and Test API
+name: .NET Core CI
 
 on:
   push:
-    branches: [ "Part2-API", "main" ]
+    branches: [ "main", "master", "part3" ]
   pull_request:
-    branches: [ "Part2-API", "main" ]
+    branches: [ "main", "master" ]
 
 jobs:
-  build-and-test:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,14 +18,17 @@ jobs:
       with:
         dotnet-version: 8.0.x
         
-    - name: Restore API
+    - name: Restore dependencies API
       run: dotnet restore RaceDayAPI/RaceDayAPI.csproj
       
-    - name: Restore Tests
-      run: dotnet restore RaceDayAPI.Tests/RaceDayAPI.Tests.csproj
-      
-    - name: Build
+    - name: Build API
       run: dotnet build RaceDayAPI/RaceDayAPI.csproj --no-restore
       
-    - name: Test
-      run: dotnet test RaceDayAPI.Tests/RaceDayAPI.Tests.csproj --no-build --verbosity normal
+    - name: Test API
+      run: dotnet test RaceDayAPI.Tests/RaceDayAPI.Tests.csproj --no-restore
+      
+    - name: Restore dependencies MVC
+      run: dotnet restore RaceDayMVC/RaceDayMVC.csproj
+      
+    - name: Build MVC
+      run: dotnet build RaceDayMVC/RaceDayMVC.csproj --no-restore
