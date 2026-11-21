@@ -2,7 +2,7 @@ name: .NET Core CI
 
 on:
   push:
-    branches: [ "main", "master", "part3" ]
+    branches: [ "main", "master", "Part3-MVC" ]
   pull_request:
     branches: [ "main", "master" ]
 
@@ -19,16 +19,17 @@ jobs:
         dotnet-version: 8.0.x
         
     - name: Restore dependencies API
-      run: dotnet restore RaceDayAPI/RaceDayAPI.csproj
+      run: dotnet restore "RaceDayAPI/RaceDayAPI/RaceDayAPI.csproj"
       
     - name: Build API
-      run: dotnet build RaceDayAPI/RaceDayAPI.csproj --no-restore
+      run: dotnet build "RaceDayAPI/RaceDayAPI/RaceDayAPI.csproj" --no-restore
       
+    # Notice we removed --no-restore from the test command
     - name: Test API
-      run: dotnet test RaceDayAPI.Tests/RaceDayAPI.Tests.csproj --no-restore
+      run: dotnet test "RaceDayAPI.Tests/RaceDayAPI.Tests.csproj"
       
     - name: Restore dependencies MVC
-      run: dotnet restore RaceDayMVC/RaceDayMVC.csproj
+      run: dotnet restore "RaceDayAPI/RaceDayMVC/RaceDayMVC.csproj"
       
     - name: Build MVC
-      run: dotnet build RaceDayMVC/RaceDayMVC.csproj --no-restore
+      run: dotnet build "RaceDayAPI/RaceDayMVC/RaceDayMVC.csproj" --no-restore

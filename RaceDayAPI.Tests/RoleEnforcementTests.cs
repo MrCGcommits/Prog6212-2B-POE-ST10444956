@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -61,10 +61,11 @@ namespace RaceDayAPI.Tests
         }
 
         [Fact]
-        public void CaptureResult_HasOrganiserOnlyAuthorizeAttribute()
+        public void AddResult_HasOrganiserOnlyAuthorizeAttribute()
         {
             // Arrange
-            var methodInfo = typeof(ResultsController).GetMethod("CaptureResult");
+            // Updated to look for "AddResult" instead of the old "CaptureResult"
+            var methodInfo = typeof(ResultsController).GetMethod("AddResult");
 
             // Act
             var authorizeAttribute = methodInfo?.GetCustomAttribute<AuthorizeAttribute>();
