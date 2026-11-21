@@ -37,11 +37,11 @@ RaceDay is a full-stack web application designed for the South African road runn
 
 ## 🐳 Docker Setup
 To run the MVC application in a Docker container, run the following commands from the root directory of the solution:
-![CI Build Success](./ci-success.png)
+
 ```bash
 docker build -t raceday-mvc -f RaceDayMVC/Dockerfile .
 docker run -d -p 8080:8080 --name raceday-mvc-container raceday-mvc
-
+```
 
 The app will be accessible at http://localhost:8080.
 
