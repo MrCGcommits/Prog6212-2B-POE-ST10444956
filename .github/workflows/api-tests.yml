@@ -18,9 +18,6 @@ jobs:
       with:
         dotnet-version: 8.0.x
         
-    - name: Clean all projects
-      run: dotnet clean "RaceDayAPI/RaceDayAPI/RaceDayAPI.csproj" && dotnet clean "RaceDayAPI.Tests/RaceDayAPI.Tests.csproj" && dotnet clean "RaceDayAPI/RaceDayMVC/RaceDayMVC.csproj"
-        
     - name: Restore dependencies API
       run: dotnet restore "RaceDayAPI/RaceDayAPI/RaceDayAPI.csproj"
       
