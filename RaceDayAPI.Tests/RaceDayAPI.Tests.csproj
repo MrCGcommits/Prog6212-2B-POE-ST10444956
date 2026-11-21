@@ -19,7 +19,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\RaceDayAPI\RaceDayAPI.csproj" />
     <ProjectReference Include="..\RaceDayAPI\RaceDayAPI\RaceDayAPI.csproj" />
   </ItemGroup>
 
